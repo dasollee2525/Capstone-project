@@ -1,11 +1,10 @@
-import styled from "styled-components";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Main from "./site/main";
 import Form1 from "./site/form-one";
 import Form2 from "./site/form-two";
 import ReD from "./site/request";
-
+import { Nav, Navbar } from "react-bootstrap";
 function App() {
   return (
     <div className="App">

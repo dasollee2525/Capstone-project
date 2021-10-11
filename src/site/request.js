@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import MakeButton from "../components/button";
 import { Button } from "react-bootstrap";
+let Outcontainer = styled.div`
+  height: 100%;
+  width: 100%;
+`;
 
 let Intro = styled.div`
   display: flex;
@@ -10,14 +14,14 @@ let Intro = styled.div`
   height: 30%;
   width: 100%;
 `;
-const Text = styled.div`
+let Text = styled.div`
   display: flex;
   height: 20%;
   width: 100%;
   flex-direction: column;
   align-items: center;
 `;
-const Footer = styled.div`
+let Footer = styled.div`
   display: flex;
   height: 50%;
   width: 100%;
@@ -30,7 +34,7 @@ let Spantext = styled.span`
   display: inline-block;
   margin: 50px 30px;
 `;
-let Outer = styled.div`
+let Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +43,7 @@ let Outer = styled.div`
 `;
 function ReD() {
   return (
-    <Outer>
+    <Outcontainer>
       <Intro>
         <Spantext size={"25px"}>Design your own font</Spantext>
         <div>
@@ -77,15 +81,14 @@ function ReD() {
                 <br></br>
                 <span>
                   A) 홈페이지에서 <b>A/S</b>를 신청해주세요! 마음에 들지 않는
-                  부분을
-                  <b>다시</b> 수정해서 드릴게요!
+                  부분을 <b>다시</b> 수정해서 드릴게요!
                 </span>
               </div>
             }
           ></MakeButton>
         </div>
       </Footer>
-    </Outer>
+    </Outcontainer>
   );
 }
 export default ReD;
