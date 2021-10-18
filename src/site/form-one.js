@@ -149,7 +149,7 @@ function Form1() {
               <div>
                 <label>
                   <Radio type="checkbox" name="number" />
-                  intial
+                  initial
                 </label>
                 &nbsp;&nbsp;
                 <label>
@@ -168,7 +168,7 @@ function Form1() {
               <div>
                 <label>
                   <Radio type="checkbox" name="number" />
-                  intial
+                  initial
                 </label>
                 &nbsp;&nbsp;
                 <label>
@@ -187,7 +187,7 @@ function Form1() {
               <div>
                 <label>
                   <Radio type="checkbox" name="number" />
-                  intial
+                  initial
                 </label>
                 &nbsp;&nbsp;
                 <label>

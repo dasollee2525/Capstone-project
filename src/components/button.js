@@ -12,11 +12,14 @@ let Button = styled.button`
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 20px;
+  width: ${(props) => props.size};
 `;
 function MakeButton(props) {
   return (
     <div>
-      <Button backgroundcolor={props.backgroundcolor}>{props.text}</Button>
+      <Button size={props.size} backgroundcolor={props.backgroundcolor}>
+        {props.text}
+      </Button>
     </div>
   );
 }
