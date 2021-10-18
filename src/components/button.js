@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 let Button = styled.button`
-  background-color: white;
+  background-color: ${(props) => props.backgroundcolor};
   color: black;
   padding: 15px 30px;
   text-align: center;
@@ -16,7 +16,7 @@ let Button = styled.button`
 function MakeButton(props) {
   return (
     <div>
-      <Button>{props.text}</Button>
+      <Button backgroundcolor={props.backgroundcolor}>{props.text}</Button>
     </div>
   );
 }

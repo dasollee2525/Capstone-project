@@ -107,8 +107,14 @@ function Main() {
           </div>
         </Leftpart>
         <Rightpart>
-          <MakeButton text={"Template.jpg"}></MakeButton>
-          <MakeButton text={"Template.pdf"}></MakeButton>
+          <MakeButton
+            text={"Template.jpg"}
+            backgroundcolor={"white"}
+          ></MakeButton>
+          <MakeButton
+            text={"Template.pdf"}
+            backgroundcolor={"white"}
+          ></MakeButton>
         </Rightpart>
       </Download>
       <hr />
@@ -121,7 +127,10 @@ function Main() {
           </Spantext>
         </Leftpart>
         <Rightpart>
-          <MakeButton text={"A/S 신청하기"}></MakeButton>
+          <MakeButton
+            text={"A/S 신청하기"}
+            backgroundcolor={"white"}
+          ></MakeButton>
         </Rightpart>
       </Footer>
     </Outcontainer>
