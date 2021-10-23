@@ -61,6 +61,103 @@ let Conbutton = styled.button`
 `;
 
 function Form2() {
+  let initial = [
+    "ㄱ",
+    "ㄴ",
+    "ㄷ",
+    "ㄹ",
+    "ㅁ",
+    "ㅂ",
+    "ㅅ",
+    "ㅇ",
+    "ㅈ",
+    "ㅊ",
+    "ㅋ",
+    "ㅌ",
+    "ㅍ",
+    "ㅎ",
+    "ㄲ",
+    "ㄸ",
+    "ㅃ",
+    "ㅆ",
+    "ㅉ",
+  ];
+  let middle = [
+    "ㅏ",
+    "ㅑ",
+    "ㅓ",
+    "ㅕ",
+    "ㅗ",
+    "ㅛ",
+    "ㅜ",
+    "ㅠ",
+    "ㅡ",
+    "ㅣ",
+    "ㅐ",
+    "ㅒ",
+    "ㅔ",
+    "ㅖ",
+    "ㅘ",
+    "ㅙ",
+    "ㅚ",
+    "ㅝ",
+    "ㅞ",
+    "ㅟ",
+    "ㅢ",
+  ];
+  let final = [
+    "ㄱ",
+    "ㄴ",
+    "ㄷ",
+    "ㄹ",
+    "ㅁ",
+    "ㅂ",
+    "ㅅ",
+    "ㅇ",
+    "ㅈ",
+    "ㅊ",
+    "ㅋ",
+    "ㅌ",
+    "ㅍ",
+    "ㅎ",
+    "ㄲ",
+    "ㄳ",
+    "ㄵ",
+    "ㄶ",
+    "ㄺ",
+    "ㄻ",
+    "ㄼ",
+    "ㄽ",
+    "ㄾ",
+    "ㄿ",
+    "ㅀ",
+    "ㅄ",
+    "ㅆ",
+  ];
+  let consonant_length = 10;
+  let initial_rendering = () => {
+    let result = [];
+    for (let i = 0; i < consonant_length; i++) {
+      result.push(<Conbutton key={i}>{initial[i]}</Conbutton>);
+    }
+    return result;
+  };
+  let middle_rendering = () => {
+    let result = [];
+    for (let i = 0; i < consonant_length; i++) {
+      result.push(<Conbutton key={i}>{middle[i]}</Conbutton>);
+    }
+    return result;
+  };
+
+  let final_rendering = () => {
+    let result = [];
+    for (let i = 0; i < consonant_length; i++) {
+      result.push(<Conbutton key={i}>{final[i]}</Conbutton>);
+    }
+    return result;
+  };
+
   return (
     <Outcontainer>
       <Header>
@@ -114,52 +211,19 @@ function Form2() {
           <Consonant marginsize={"0 0 30px 0"}>
             <InputGroup.Text id="inputGroup-sizing-lg">initial</InputGroup.Text>
             <Conbutton>&#171;</Conbutton>
-            <Conbutton>ㄱ</Conbutton>
-            <Conbutton>ㄴ</Conbutton>
-            <Conbutton>ㄷ</Conbutton>
-            <Conbutton>ㄹ</Conbutton>
-            <Conbutton>ㅁ</Conbutton>
-            <Conbutton>ㅂ</Conbutton>
-            <Conbutton>ㅅ</Conbutton>
-            <Conbutton>ㅇ</Conbutton>
-            <Conbutton>ㅈ</Conbutton>
-            <Conbutton>ㅊ</Conbutton>
-            <Conbutton>ㅋ</Conbutton>
-            <Conbutton>ㅌ</Conbutton>
+            {initial_rendering()}
             <Conbutton>&#187;</Conbutton>
           </Consonant>
           <Consonant marginsize={"0 0 30px 0"}>
-            <InputGroup.Text id="inputGroup-sizing-lg">initial</InputGroup.Text>
+            <InputGroup.Text id="inputGroup-sizing-lg">middle</InputGroup.Text>
             <Conbutton>&#171;</Conbutton>
-            <Conbutton>ㅏ</Conbutton>
-            <Conbutton>ㅑ</Conbutton>
-            <Conbutton>ㅓ</Conbutton>
-            <Conbutton>ㅕ</Conbutton>
-            <Conbutton>ㅗ</Conbutton>
-            <Conbutton>ㅛ</Conbutton>
-            <Conbutton>ㅜ</Conbutton>
-            <Conbutton>ㅠ</Conbutton>
-            <Conbutton>ㅡ</Conbutton>
-            <Conbutton>ㅣ</Conbutton>
-            <Conbutton>ㅢ</Conbutton>
-            <Conbutton>ㅟ</Conbutton>
+            {middle_rendering()}
             <Conbutton>&#187;</Conbutton>
           </Consonant>
           <Consonant marginsize={"0 0 30px 0"}>
-            <InputGroup.Text id="inputGroup-sizing-lg">initial</InputGroup.Text>
+            <InputGroup.Text id="inputGroup-sizing-lg">final</InputGroup.Text>
             <Conbutton>&#171;</Conbutton>
-            <Conbutton>ㄱ</Conbutton>
-            <Conbutton>ㄴ</Conbutton>
-            <Conbutton>ㄷ</Conbutton>
-            <Conbutton>ㄹ</Conbutton>
-            <Conbutton>ㅁ</Conbutton>
-            <Conbutton>ㅂ</Conbutton>
-            <Conbutton>ㅅ</Conbutton>
-            <Conbutton>ㅇ</Conbutton>
-            <Conbutton>ㅈ</Conbutton>
-            <Conbutton>ㅊ</Conbutton>
-            <Conbutton>ㅋ</Conbutton>
-            <Conbutton>ㅌ</Conbutton>
+            {final_rendering()}
             <Conbutton>&#187;</Conbutton>
           </Consonant>
         </Upload>
