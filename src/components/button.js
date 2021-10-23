@@ -2,21 +2,32 @@ import React from "react";
 import styled from "styled-components";
 
 let Button = styled.button`
-  background-color: white;
-  color: black;
-  padding: 15px 30px;
+  background-color: ${(props) => props.backgroundcolor};
+  color: ${(props) => props.color};
+  padding: ${(props) => props.paddingsize};
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
+  font-size: ${(props) => props.fontsize};
+  margin: ${(props) => props.marginsize};
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: ${(props) => props.radius};
+  width: ${(props) => props.width};
 `;
 function MakeButton(props) {
   return (
     <div>
-      <Button>{props.text}</Button>
+      <Button
+        backgroundcolor={props.backgroundcolor}
+        color={props.color}
+        paddingsize={props.paddingsize}
+        fontsize={props.fontsize}
+        marginsize={props.marginsize}
+        radius={props.radius}
+        width={props.width}
+      >
+        {props.text}
+      </Button>
     </div>
   );
 }

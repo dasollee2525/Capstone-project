@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import MakeButton from "../components/button";
-import { Button } from "react-bootstrap";
+
 let Outcontainer = styled.div`
   height: 100%;
   width: 100%;
 `;
-
 let Intro = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,7 +13,7 @@ let Intro = styled.div`
   height: 30%;
   width: 100%;
 `;
-let Text = styled.div`
+let Textdiv = styled.div`
   display: flex;
   height: 20%;
   width: 100%;
@@ -32,31 +31,27 @@ let Footer = styled.div`
 let Spantext = styled.span`
   font-size: ${(props) => props.size};
   display: inline-block;
-  margin: 50px 30px;
+  margin: ${(props) => props.margin};
 `;
-let Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-`;
+
 function ReD() {
   return (
     <Outcontainer>
       <Intro>
-        <Spantext size={"25px"}>Design your own font</Spantext>
+        <Spantext size={"25px"} margin={"50px 0 30px 0"}>
+          Design your own font
+        </Spantext>
         <div>
           <h1>GAN단한 폰트 제작소</h1>
         </div>
       </Intro>
-      <Text>
-        <Spantext size={"35px"}>
+      <Textdiv>
+        <Spantext size={"35px"} margin={"50px 0 30px 0"}>
           <b>이용해주셔서 감사합니다</b>
         </Spantext>
-      </Text>
+      </Textdiv>
       <Footer>
-        <Spantext size={"30px"}>
+        <Spantext size={"30px"} margin={"50px 0 30px 0"}>
           <b>Q&A</b>
         </Spantext>
         <div>
@@ -73,6 +68,12 @@ function ReD() {
                 </span>
               </div>
             }
+            backgroundcolor={"white"}
+            color={"black"}
+            paddingsize={"2px"}
+            fontsize={"20px"}
+            marginsize={"10px"}
+            radius={"10px"}
           ></MakeButton>
           <MakeButton
             text={
@@ -85,6 +86,12 @@ function ReD() {
                 </span>
               </div>
             }
+            backgroundcolor={"white"}
+            color={"black"}
+            paddingsize={"2px"}
+            fontsize={"20px"}
+            marginsize={"10px"}
+            radius={"10px"}
           ></MakeButton>
         </div>
       </Footer>
