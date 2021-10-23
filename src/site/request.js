@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import MakeButton from "../components/button";
-
 let Outcontainer = styled.div`
   height: 100%;
   width: 100%;
@@ -22,7 +21,7 @@ let Textdiv = styled.div`
 `;
 let Footer = styled.div`
   display: flex;
-  height: 50%;
+  height: 40%;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -37,6 +36,18 @@ let Spantext = styled.span`
 function ReD() {
   return (
     <Outcontainer>
+      <Header>
+        <Navbar bg="light" variant="light">
+          <Container>
+            <Navbar.Brand href="/">Home</Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link href="/form1">Font-Generation</Nav.Link>
+              <Nav.Link href="/form2">Font-AS</Nav.Link>
+              <Nav.Link href="/request">Q&A</Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+      </Header>
       <Intro>
         <Spantext size={"25px"} margin={"50px 0 30px 0"}>
           Design your own font
@@ -58,14 +69,14 @@ function ReD() {
           <MakeButton
             text={
               <div>
-                <span>
+                <Spantext>
                   Q) 폰트를 제작하는데 걸리는 시간, 받는 방법이 궁금해요!
-                </span>
+                </Spantext>
                 <br></br>
-                <span>
+                <Spantext>
                   A) 만드는데 <b>대략 30분</b>이 소요됩니다! 완료되는대로{" "}
                   <b>이메일</b>로 폰트 파일을 보내드릴게요!
-                </span>
+                </Spantext>
               </div>
             }
             backgroundcolor={"white"}
@@ -78,12 +89,12 @@ function ReD() {
           <MakeButton
             text={
               <div>
-                <span>Q) 마음에 안들면 어떡하죠?</span>
+                <Spantext>Q) 마음에 안들면 어떡하죠?</Spantext>
                 <br></br>
-                <span>
+                <Spantext>
                   A) 홈페이지에서 <b>A/S</b>를 신청해주세요! 마음에 들지 않는
                   부분을 <b>다시</b> 수정해서 드릴게요!
-                </span>
+                </Spantext>
               </div>
             }
             backgroundcolor={"white"}
