@@ -1,3 +1,4 @@
+const axios = require("axios");
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -11,12 +12,12 @@ app.use(bodyParser.json());
 http.listen(8080, function () {
   console.log("listening on 8080");
 });
-app.use(express.static(path.join(__dirname, "web/build")));
+app.use(express.static(path.join(__dirname, "web1/build")));
 app.get("/", function (요청, 응답) {
-  응답.sendFile(path.join(__dirname, "/web/build/index.html"));
+  응답.sendFile(path.join(__dirname, "/web1/build/index.html"));
 });
 app.get("*", function (요청, 응답) {
-  응답.sendFile(path.join(__dirname, "/web/build/index.html"));
+  응답.sendFile(path.join(__dirname, "/web1/build/index.html"));
 });
 
 app.post("/text", (req, res) => {
@@ -34,6 +35,27 @@ app.post("/text", (req, res) => {
       });
     }
   });
+
+  axios("http://127.0.0.1:5000/test", {
+    method: "get",
+  })
+    .then(response => {
+    console.log(response.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+
+  axios.post("http://127.0.0.1:5000/test", {
+    method: "post",
+    content: "testData", 
+  })
+    .then(response => {
+    console.log(response.data)
+    })
+    .catch(error => {
+      console.log(error);
+    });
 });
 
 app.post("/text1", (req, res) => {
