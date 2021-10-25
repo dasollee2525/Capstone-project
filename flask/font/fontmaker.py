@@ -7,5 +7,5 @@ fontmaker_api = Blueprint('fontmaker_api', __name__)
 
 @fontmaker_api.route("/font", methods=['POST'])
 def generatefont():
-
-    return "directory" 
+    directory = "directory"
+    return directory
