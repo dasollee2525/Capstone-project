@@ -57,6 +57,7 @@ app.post("/text1", (req, res) => {
 
 app.post("/text2", (req, res) => {
   var fs = require("fs");
+  cons;
   var readline = require("readline");
   var path = "test1.txt";
   fs.open(path, "a+", function (err, fd) {
