@@ -1,0 +1,15 @@
+{
+        "numPage" : 1,
+        "size": 135,
+        "numCol": 10,
+        "numRow": 2,
+        "initX": 176,
+        "initY": 234,
+        "rowGap": 34,
+        "chars": [
+                [
+                        ["\uAC00", "\uB0D4","\uB35B" ,"\uB825","\uBAB0","\uBD74", "\uC229", "\uB098", "\uB294", "\uB4DD"],
+                        ["\uC724", "\uCEA1", "\uC2A4", "\uD1A4", "\uC9F1", "\uD5EC", "\uB85C", "\uC6B0", "\uC6D4", "\uB4DC"]
+                ]
+        ]
+}
