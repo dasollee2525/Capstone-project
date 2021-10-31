@@ -13,7 +13,7 @@ const multer = require("multer");
 const fs = require("fs");
 let dest = "";
 let file_name = "";
-
+let i = 0;
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     dest = "web1/public";
@@ -22,6 +22,7 @@ const storage = multer.diskStorage({
   filename: function (req, file, cb) {
     new_file = Date.now() + "-" + file.originalname;
     file_name += new_file + " ";
+    i += 1;
     cb(null, new_file);
   },
 });
@@ -127,18 +128,43 @@ app.post("/button", (req, res) => {
     } else if (err) {
       return res.status(500).json(err);
     }
-    axios
-      .post("http://127.0.0.1:5000/test", {
-        method: "post",
-        content: file_name,
-      })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    return res.status(200).send(req.file);
   });
+
   file_name = "";
 });
+app.post("/text", (req, res) => {
+  let fontName = req.body.fontName;
+  let email = req.body.email;
+  let check = req.body.check;
+  axios
+    .post("http://127.0.0.1:5000/test", {
+      method: "post",
+      content: {
+        fileName: file_name,
+        email,
+        fontName,
+        check,
+      },
+    })
+    .then((response) => {
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  return res.status(200).send(req.file);
+});
+// axios.post(  "http://localhost:8080/button",
+
+//   { file_name
+//     fontname,
+//     email,
+//     check,
+//   },
+//   {
+//     headers: {
+//       "Content-type": "application/json",
+//       Accept: "application/json",
+//     },
+//   }
+// );

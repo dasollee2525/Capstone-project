@@ -48,6 +48,7 @@ function Info() {
   let [email, email변경] = useState("");
   let [check, check변경] = useState(false);
   let [img, img변경] = useState(null);
+
   const handleclick = (e) => {
     const fd = new FormData();
     fd.append("file", img);
@@ -64,6 +65,21 @@ function Info() {
     axios.post("http://localhost:8080/button", fd, {}).then((res) => {
       console.log(res.data);
     });
+    axios.post(
+      "http://localhost:8080/text",
+      {
+        fileName: "practice.pdf",
+        fontName: fontname,
+        email,
+        check,
+      },
+      {
+        headers: {
+          "Content-type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    );
   };
   return (
     <div>
