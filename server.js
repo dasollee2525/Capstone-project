@@ -20,8 +20,11 @@ const storage = multer.diskStorage({
     cb(null, "web1/public");
   },
   filename: function (req, file, cb) {
-    new_file = Date.now() + "-" + file.originalname;
-    file_name += new_file + " ";
+    if (i == 0) {
+      new_file = "practice.pdf";
+    } else {
+      new_file = Date.now() + "-" + file.originalname;
+    }
     i += 1;
     cb(null, new_file);
   },
@@ -129,10 +132,10 @@ app.post("/button", (req, res) => {
       return res.status(500).json(err);
     }
   });
-
   file_name = "";
 });
 app.post("/text", (req, res) => {
+  let fileName = req.body.fileName;
   let fontName = req.body.fontName;
   let email = req.body.email;
   let check = req.body.check;
@@ -140,7 +143,7 @@ app.post("/text", (req, res) => {
     .post("http://127.0.0.1:5000/test", {
       method: "post",
       content: {
-        fileName: file_name,
+        fileName,
         email,
         fontName,
         check,
@@ -152,6 +155,7 @@ app.post("/text", (req, res) => {
     .catch((error) => {
       console.log(error);
     });
+
   return res.status(200).send(req.file);
 });
 // axios.post(  "http://localhost:8080/button",
