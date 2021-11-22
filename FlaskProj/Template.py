@@ -23,8 +23,8 @@ class Template:
 
     def crop(self):
         pages = convert_from_path(
-              pdf_path='./source/' + self.fileName + '.pdf'
-            , poppler_path=r'C:\Program Files\poppler-0.68.0_x86\poppler-0.68.0\bin'
+              pdf_path='C:\\Users\\96032\\PycharmProjects\\flask-dmfont\\Capstone-project\\web1\\public\\' + self.fileName
+            , poppler_path=r'C:\Users\96032\PycharmProjects\flask-dmfont\ProgramFiles\poppler-0.68.0\bin'
         )
 
         savePath = self.fontName+"/in/pngs/"

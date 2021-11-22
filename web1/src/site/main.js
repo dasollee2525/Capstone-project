@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import MakeButton from "../components/button";
 import { Nav, Navbar } from "react-bootstrap";
+import { createGlobalStyle } from "styled-components";
 let Outcontainer = styled.div`
   height: 100%;
   width: 100%;
@@ -51,6 +52,12 @@ let Spantext = styled.span`
   display: inline-block;
   margin: ${(props) => props.margin};
 `;
+const GlobalStyle = createGlobalStyle`
+	font-family: 'HarryFont'
+`;
+const HeadLine = styled.h1`
+  font-family: "HarryFont";
+`;
 function Main() {
   return (
     <Outcontainer>
@@ -71,6 +78,9 @@ function Main() {
           <Spantext fontsize={"25px"} margin={"0 0 50px 0"}>
             Design your own font
           </Spantext>
+          <GlobalStyle>
+            <HeadLine>헤드라인입니다</HeadLine>
+          </GlobalStyle>
           <div>
             <h1>GAN단한 폰트 제작소</h1>
           </div>

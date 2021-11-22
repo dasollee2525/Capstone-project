@@ -2,14 +2,24 @@
         "numPage" : 1,
         "size": 135,
         "numCol": 10,
-        "numRow": 2,
+        "numRow": 11,
         "initX": 176,
         "initY": 234,
         "rowGap": 34,
         "chars": [
                 [
-                        ["\uAC00", "\uB0D4","\uB35B" ,"\uB825","\uBAB0","\uBD74", "\uC229", "\uB098", "\uB294", "\uB4DD"],
-                        ["\uC724", "\uCEA1", "\uC2A4", "\uD1A4", "\uC9F1", "\uD5EC", "\uB85C", "\uC6B0", "\uC6D4", "\uB4DC"]
+                        ["\uac1d", "\uadfc", "\uae89", "\uaf48", "\uafbf", "\ub22a", "\ub361", "\ub4ec", "\ub5cd", "\ub71f"],
+                        ["\ub839", "\ub9a7", "\ubaa5", "\ubafb", "\ubcf6", "\ube65", "\uc060", "\uc25b", "\uc48e", "\uc5a9"],
+                        ["\uc750", "\uc8a2", "\uc9a0", "\ucb2a", "\ucd7b", "\ucf5a", "\ud2c4", "\ud2f9", "\ud4db", "\ud6f2"],
+                        ["\uac6c", "\uad1b", "\uaecb", "\ub198", "\ub1de", "\ub37d", "\ub43c", "\ub589", "\ub61b", "\ub7b2"],
+                        ["\ub854", "\ub87f", "\ub99d", "\ub9ae", "\ub900", "\uba99", "\ubae8", "\ubb39", "\ubb6b", "\uba5c"],
+                        ["\ube03", "\ubf3c", "\uc147", "\uc1f4", "\uc2e7", "\uc2fb", "\uc4a8", "\uc4dc", "\uc608", "\uc625"],
+                        ["\uc72f", "\uc788", "\uc957", "\uc99d", "\uc9db", "\ucb83", "\ucc39", "\ucc61", "\ucf4c", "\ud289"],
+                        ["\ud266", "\ud3c6", "\ud3ef", "\ud41d", "\ud47e", "\ud496", "\ud4df", "\ud55f", "\ud584", "\ud6fa"],
+                        ["\ud62b", "\ud642", "\ub489", "\ub7bf", "\ub860", "\uba25", "\uc96e", "\ucc4c", "\uce3f", "\ud03d"],
+                        ["\ud0c9", "\ud41d", "\ud615", "\uad2b", "\uad75", "\uaf3c", "\ub363", "\ub58c", "\ub639", "\ubc0f"],
+                        ["\ubd72", "\ubff4", "\uc3d9", "\ud3d8", "\ud3f3", "\ubf06", "\ud78e", "\uac84", "\uc544", "\ud3ec"]
+
                 ]
         ]
 }
