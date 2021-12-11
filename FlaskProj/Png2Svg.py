@@ -56,7 +56,7 @@ class Png2Svg:
         pnm =self.pnmPath + png.split(".")[0] + ".pnm"
         png = self.pngPath + png;
 
-        cmd = self.magicPath+" convert {0} {1}".format(png,pnm)
+        cmd = "magick convert {0} {1}".format(png,pnm)
         os.system(cmd)
 
     def pnm2svg(self,pnm):

@@ -33,15 +33,20 @@ Note that using different version of required packages can effects the results, 
 
 ## Installation
 
-### Open sources:
+### OpenSources:
 
-```
-imagemagick
-poppler
-fontforge
-potrace
-```
 
+[FontForge](https://fontforge.org/en-US/) : Fully formatted font editor that can support all plain font formats, To Convert SVG to TTF <br />
+-> Download FontForge for Windows : "FontForge-2020-11-07-Windows.exe", and install.
+
+[ImageMagick](https://imagemagick.org/script/download.php#windows) : Opensource used to create or fix graphic images, To Convert PNG to PNM <br />
+-> Download Latest Version: "ImageMagick-7.1.0-17-Q16-HDRI-x64-dll.exe" and install it, and add the path to your SYSTEM PATH
+
+[Poppler](https://blog.alivate.com.au/poppler-windows/) : Library that performs PDF document rendering <br />
+-> Download Latest binary : "poppler-0.68.0_x86" from this website, unzip it in **ProgramFiles directory**
+
+[potrace](http://potrace.sourceforge.net/) : Cross-platform that converts bitmap images into vector graphics,To Convert PNM to SVG <br />
+-> Already installed and uploaded to Github, so no need to re-download.
 ### Pretrained model
 Data sources for Korean-handwriting datasets were built from [UhBee fonts](http://uhbeefont.com/). For running the DM-font, pretrained model below.
 
