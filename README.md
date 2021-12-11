@@ -10,7 +10,7 @@ Hangul is a language that is composed of initial, medial, and final consonant. T
 
 ## Environment
 
-####Install dependencies in Conda Env:
+#### Install dependencies in Conda Env:
 
 ```commandline
 conda install --name CONDA_ENV_NAME --file requirements.txt
@@ -18,7 +18,7 @@ conda install --name CONDA_ENV_NAME --file requirements.txt
 Note that using different version of required packages can effects the results, especially PyTorch. The implementations are tested on Python 3.7+
 
 
-####Should pull out the dmfont, and ProgramFiles directories outside of Capstone-project directory
+#### Should pull out the dmfont, and ProgramFiles directories outside of Capstone-project directory
 ```
 .
 ├── dmfont                 # From Capstone-project directory
@@ -33,7 +33,7 @@ Note that using different version of required packages can effects the results, 
 
 ## Installation
 
-###Open sources:
+### Open sources:
 
 ```
 imagemagick
@@ -42,7 +42,7 @@ fontforge
 potrace
 ```
 
-###Pretrained model
+### Pretrained model
 Data sources for Korean-handwriting datasets were built from [UhBee fonts](http://uhbeefont.com/). For running the DM-font, pretrained model below.
 
 ● [Checkpoint trained on the Korean-handwriting dataset](https://drive.google.com/file/d/1y_8XDNtawtA2P7-pHbCQ3yGEcFX-9H1R/view?usp=sharing)
@@ -72,7 +72,7 @@ In terminal(1) Server using node.js will run. <br />
 In terminal(2) Frontend using React will run. <br />
 In terminal(3) Flask server will run.
 <br /><br />
-####terminal command:
+#### terminal command:
 ```
 terminal(1)> node server
 terminal(2)> npm start
