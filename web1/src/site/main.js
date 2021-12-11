@@ -4,45 +4,21 @@ import styled from "styled-components";
 import MakeButton from "../components/button";
 import { Nav, Navbar } from "react-bootstrap";
 import { createGlobalStyle } from "styled-components";
-let Outcontainer = styled.div`
-  height: 100%;
-  width: 100%;
-`;
-
-let Header = styled.div`
-  height: 10%;
-  width: 100%;
-`;
-let Intro = styled.div`
-  heigth: 40%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-`;
-let Download = styled.div`
-  display: flex;
-  height: 25%;
-  width: 100%;
-  align-items: center;
-`;
-let Footer = styled.div`
-  display: flex;
-  height: 25%;
-  width: 100%;
-  align-items: center;
-`;
-
-let Leftpart = styled.div`
-  padding-left: 300px;
-  width: 50%;
-`;
-let Rightpart = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-right: 300px;
-`;
+import { useParams, Link } from "react-router-dom";
+import "../fonts/font.css";
+let style = {
+  a: {
+    width: "500px",
+    height: "50px",
+    "border-radius": "30px",
+    "background-color": "#FFFACD",
+  },
+  b: {
+    width: "200px",
+    cursor: "pointer",
+    margin: "20px",
+  },
+};
 let Listtext = styled.li`
   padding: ${(props) => props.paddingsize};
   font-size: ${(props) => props.fontsize};
@@ -52,116 +28,164 @@ let Spantext = styled.span`
   display: inline-block;
   margin: ${(props) => props.margin};
 `;
-const GlobalStyle = createGlobalStyle`
-	font-family: 'HarryFont'
+let Header = styled.div`
+  padding: 100px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
-const HeadLine = styled.h1`
+
+let Input = styled.div`
+  margin: 100px;
+  font-family: "seongbin";
+`;
+let Text = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 30%;
+`;
+let Text1 = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 30%;
+`;
+let Text2 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 30%;
+`;
+let Text3 = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+let Text4 = styled.span`
+  padding: 20px;
+`;
+let Text5 = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+let Text6 = styled.span`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+let Input1 = styled.input`
   font-family: "HarryFont";
+  width: 500px;
+  height: 100px;
+  display: inline;
+  font-size: 50px;
 `;
-function Main() {
+let Outcontainer = styled.div`
+  width: 100%;
+  background-color: #ffebcd;
+  display: flex;
+  flex-direction: column;
+  font-family: "HarryFont1";
+`;
+let Left = styled.div`
+  width: 50%;
+  padding: 200px;
+`;
+let Right = styled.div`
+  width: 50%;
+  padding: 20px;
+  margin: 10px;
+`;
+let Hr = styled.hr`
+  size: 20px;
+  height: 10px;
+  width: 100%;
+  background-color: black;
+`;
+const Middle = () => {
+  const downloadpdf = () => {
+    window.location.href = "/filledTemplate.pdf";
+  };
   return (
     <Outcontainer>
-      <Header>
-        <Navbar bg="light" variant="light">
-          <Container>
-            <Navbar.Brand href="/">Home</Navbar.Brand>
-            <Nav className="me-auto">
-              <Nav.Link href="/form1">Font-Generation</Nav.Link>
-              <Nav.Link href="/form2">Font-AS</Nav.Link>
-              <Nav.Link href="/request">Q&A</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-      </Header>
-      <Intro>
-        <Leftpart>
-          <Spantext fontsize={"25px"} margin={"0 0 50px 0"}>
-            Design your own font
-          </Spantext>
-          <GlobalStyle>
-            <HeadLine>헤드라인입니다</HeadLine>
-          </GlobalStyle>
-          <div>
-            <h1>GAN단한 폰트 제작소</h1>
-          </div>
-        </Leftpart>
-        <Rightpart>
-          <h3>사용법 안내</h3>
-
-          <ol>
-            <Listtext paddingsize={"20px"} fontsize={"20px"}>
-              양식에 맞춰 몇 가지 단어를 작성하고 나만의 폰트를 제작해보세요
-            </Listtext>
-            <Listtext paddingsize={"20px"} fontsize={"20px"}>
-              폰트 제작이 완료되면 이메일을 통해 전송해드립니다.
-            </Listtext>
-            <Listtext paddingsize={"20px"} fontsize={"20px"}>
-              만약 마음에 들지 않는 문자가 있으시다면, A/S도 가능합니다!
-            </Listtext>
-          </ol>
-        </Rightpart>
-      </Intro>
-      <hr />
-      <Download>
-        <Leftpart>
+      <Text>
+        <Left>
+          <h1>Gandan FontMaker</h1>
+        </Left>
+        <Right>
+          <span>
+            <ol>
+              <Listtext paddingsize={"10px"} fontsize={"30px"}>
+                Do you want to make your own font? <br />
+                -&gt;<b> Use Gandan FontMaker.</b>
+              </Listtext>
+              <Listtext paddingsize={"10px"} fontsize={"30px"}>
+                Get your handwriting and make your <b>own font</b> through
+                Deeplearning.
+              </Listtext>
+              <Listtext paddingsize={"10px"} fontsize={"30px"}>
+                <h4>Write what your want</h4>
+                <Input1 file="text"></Input1>
+              </Listtext>
+            </ol>
+          </span>
+        </Right>
+      </Text>
+      <Hr></Hr>
+      <Text1>
+        <Left>
+          <h1>How to use</h1>
+        </Left>
+        <Right>
+          <span>
+            <ol>
+              <Listtext paddingsize={"10px"} fontsize={"30px"}>
+                Download the form below.
+              </Listtext>
+              <Listtext paddingsize={"10px"} fontsize={"30px"}>
+                Fill it out according to the form and upload it.
+              </Listtext>
+              <Listtext paddingsize={"10px"} fontsize={"30px"}>
+                If you don't like the result, A/S is also possible!
+              </Listtext>
+            </ol>
+          </span>
+        </Right>
+      </Text1>
+      <Hr></Hr>
+      <Text2>
+        <Left>
           <h2>DownLoad Template</h2>
-          <br />
-          <div>
-            <Spantext fontsize={"20px"} length={"30px"}>
-              제공되는 템플릿을 다운받아 양식에 맞게 작성하세요.
-            </Spantext>
-            <br />
-            <Spantext fontsize={"20px"} length={"30px"}>
-              테블릿 혹은 디지털 펜으로 작성 후 jpg 파일로 제출해주세요
-            </Spantext>
-          </div>
-        </Leftpart>
-        <Rightpart>
-          <MakeButton
-            text={"Template.jpg"}
-            backgroundcolor={"white"}
-            color={"black"}
-            paddingsize={"2px"}
-            fontsize={"20px"}
-            marginsize={"10px"}
-            radius={"10px"}
-            width={"200px"}
-          ></MakeButton>
-          <MakeButton
-            text={"Template.pdf"}
-            backgroundcolor={"white"}
-            color={"black"}
-            paddingsize={"2px"}
-            fontsize={"20px"}
-            marginsize={"10px"}
-            radius={"10px"}
-            width={"200px"}
-          ></MakeButton>
-        </Rightpart>
-      </Download>
-      <hr />
-      <Footer>
-        <Leftpart>
-          <h2>A/S Service</h2>
-          <br />
-          <Spantext fontsize={"20px"} length={"30px"}>
-            제작된 폰트가 마음에 안드시나요???
-          </Spantext>
-        </Leftpart>
-        <Rightpart>
-          <MakeButton
-            text={"A/S 신청하기"}
-            backgroundcolor={"white"}
-            color={"black"}
-            paddingsize={"2px"}
-            fontsize={"20px"}
-            marginsize={"10px"}
-            radius={"10px"}
-            width={"200px"}
-          ></MakeButton>
-        </Rightpart>
-      </Footer>
+        </Left>
+        <Right>
+          <Text3>
+            <Text4>
+              <button onClick={downloadpdf} style={style.a}>
+                Template.pdf
+              </button>
+            </Text4>
+            <Text4>
+              <Link to="/one">
+                <button style={style.a}>
+                  If you are <b>One</b> go to this
+                </button>
+              </Link>
+            </Text4>
+            <Text4>
+              <Link to="/multi">
+                <button style={style.a}>
+                  If you are <b>two or three</b> go to this
+                </button>
+              </Link>
+            </Text4>
+          </Text3>
+        </Right>
+      </Text2>
     </Outcontainer>
   );
-}
-export default Main;
+};
+
+export default Middle;

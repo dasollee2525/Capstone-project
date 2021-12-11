@@ -1,2 +1,6 @@
 node_modules
+web1/public
 db.js
+ProgramFiles/ImageMagick
+ProgramFiles/poppler-0.68.0
+dmfont/checkpoints/korean-handwriting.pth

@@ -25,6 +25,7 @@ function MakeButton(props) {
         marginsize={props.marginsize}
         radius={props.radius}
         width={props.width}
+        onClick={props.onClick}
       >
         {props.text}
       </Button>

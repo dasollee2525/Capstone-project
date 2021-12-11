@@ -1,25 +1,28 @@
-import React, { useEffect, useState } from "react";
-import {
-  InputGroup,
-  FormControl,
-  Nav,
-  Navbar,
-  Container,
-  Form,
-  ProgressBar,
-} from "react-bootstrap";
-import styled from "styled-components";
-import MakeButton from "../components/button";
-import GetInfo from "./getinfo";
-import Info from "./info";
-import { Link, useHistory, useParams } from "react-router-dom";
-import DownloadLink from "react-download-link";
+import React, { useState } from "react";
+import { Nav, Navbar, Container } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-
+import styled from "styled-components";
+import "../fonts/font.css";
+let Outcontainer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: #ffebcd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "HarryFont1";
+`;
+let Header = styled.div`
+  padding: 100px;
+  height: 10%;
+`;
+let Text1 = styled.div`
+  height: 50%;
+`;
 function Down() {
   let { id } = useParams();
   let [user_ttf, user_ttf변경] = useState("");
-  let [fontname, fontname변경] = useState("");
   axios
     .post(
       "http://localhost:8080/download",
@@ -32,29 +35,21 @@ function Down() {
       }
     )
     .then((result) => {
-      user_ttf변경("/" + result.data.user_fontname + ".ttf");
-      fontname변경(result.data.user_fontname);
-      console.log(result);
+      user_ttf변경("/" + result.data.fontName + ".ttf");
     });
   return (
-    <div>
-      <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="/">Home</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/form1">Font-Generation</Nav.Link>
-            <Nav.Link href="/form2">Font-AS</Nav.Link>
-            <Nav.Link href="/request">Q&A</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-      <h1>{id}님 밑의 링크를 다운로드 받으세요</h1>
-      <h2>
-        <Link to={user_ttf} target="_blank" download>
-          {fontname}
-        </Link>
-      </h2>
-    </div>
+    <Outcontainer>
+      <Header>
+        <h1>Thank you for using</h1>
+      </Header>
+      <Text1>
+        <h2>
+          <Link to={user_ttf} target="_blank" download>
+            <h1>Download Link</h1>
+          </Link>
+        </h2>
+      </Text1>
+    </Outcontainer>
   );
 }
 export default Down;

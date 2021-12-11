@@ -1,36 +1,44 @@
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
-import Main from "./site/main";
-import Form1 from "./site/form-one";
-import Form2 from "./site/form-two";
-import ReD from "./site/request";
+import Middle from "./site/main";
+import Form1 from "./site/twothree";
+import Form2 from "./site/as";
 import User from "./site/user";
-import Check from "./site/usercheck";
 import Down from "./site/download";
+import Useras from "./site/useras";
+import Generateone from "./site/one";
+import Bain from "./components/main1";
+import Cain from "./site/main copy";
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Main></Main>
+          <Middle></Middle>
         </Route>
-        <Route path="/form1">
+        <Route path="/multi">
           <Form1></Form1>
         </Route>
-        <Route path="/form2">
+        <Route path="/as">
           <Form2></Form2>
-        </Route>
-        <Route path="/request">
-          <ReD></ReD>
         </Route>
         <Route path="/user/:id">
           <User></User>
         </Route>
-        <Route path="/check">
-          <Check></Check>
-        </Route>
         <Route path="/download/:id">
           <Down></Down>
+        </Route>
+        <Route path="/useras/:id">
+          <Useras></Useras>
+        </Route>
+        <Route path="/one">
+          <Generateone></Generateone>
+        </Route>
+        <Route path="/mai1">
+          <Bain></Bain>
+        </Route>
+        <Route path="/Cain">
+          <Cain></Cain>
         </Route>
       </Switch>
     </div>

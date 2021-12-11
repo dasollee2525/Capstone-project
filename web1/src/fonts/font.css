@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "HarryFont";
+  font-display: fallback;
+  src: url("./hyenni.ttf.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarryFont1";
+  font-display: fallback;
+  src: url("./Cafe24SsurroundAir.ttf.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}

@@ -1,11 +1,12 @@
 {
         "numPage" : 1,
-        "size": 135,
+        "size": 128,
         "numCol": 10,
         "numRow": 11,
-        "initX": 176,
-        "initY": 234,
-        "rowGap": 34,
+        "initX": 129,
+        "initY": 236,
+        "rowGap": 52,
+        "colGap": 8,
         "chars": [
                 [
                         ["\uac1d", "\uadfc", "\uae89", "\uaf48", "\uafbf", "\ub22a", "\ub361", "\ub4ec", "\ub5cd", "\ub71f"],
@@ -19,7 +20,8 @@
                         ["\ud62b", "\ud642", "\ub489", "\ub7bf", "\ub860", "\uba25", "\uc96e", "\ucc4c", "\uce3f", "\ud03d"],
                         ["\ud0c9", "\ud41d", "\ud615", "\uad2b", "\uad75", "\uaf3c", "\ub363", "\ub58c", "\ub639", "\ubc0f"],
                         ["\ubd72", "\ubff4", "\uc3d9", "\ud3d8", "\ud3f3", "\ubf06", "\ud78e", "\uac84", "\uc544", "\ud3ec"]
-
                 ]
+
+
         ]
 }

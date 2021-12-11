@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "HarryFont";
+  font-display: fallback;
+  src: url("./seongbin.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
