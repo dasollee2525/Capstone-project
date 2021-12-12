@@ -107,7 +107,12 @@ You can test on localhost:3000/
 
 You can get the project information and Demo [HERE](https://youtu.be/8tiPPnAHw38)
 
-![readmeImg/img1.png](readmeImg/img1.png)
-![readmeImg/img2.png](readmeImg/img2.png)
-![readmeImg/img3.png](readmeImg/img3.png)
+### Main Page
+![readmeImg/image1.png](readmeImg/image1.png)
+
+### GANdan fontmaker with multiple users
+![readmeImg/image2.png](readmeImg/image2.png)
+
+### GANdan fontmaker with one user + AS service
+![readmeImg/image3.png](readmeImg/image3.png)
 
