@@ -1,12 +1,16 @@
 # 2021-2 Capstone project(SWE3028): TeamA - Jjangdol
+[SWE3028-41] Capstone Design
+Contact e-mail : 9603226407@hanmail.net
 
 ## Fontmaking Webservice using AI model : DM-font 
 
 ### Brief Explanation
 
 
-Hangul is a language that is composed of initial, medial, and final consonant. This leads to 11,172 combinations of characters in Hangul. For this reason, the current method of designing all the characters by hand is very expensive and time-consuming compared to English. We developed web-service(GANdan-fontmaker) based on Dual Memory-Augmented Font Generation Network(DM-font). Our service provides two distinctive functions; combining people’s font style and re-correcting font style for satisfying user needs.
+We developed web-service(GANdan-fontmaker) based on Dual Memory-Augmented Font Generation Network([DM-font](https://github.com/clovaai/dmfont)). Our service provides two distinctive functions; combining people’s font style and re-correcting font style for satisfying user needs.
 
+### Overall Architecture
+![readmeImg/overall.png](readmeImg/overall.png)
 
 ## Environment
 
@@ -47,6 +51,8 @@ Note that using different version of required packages can effects the results, 
 ## Installation
 
 ### OpenSources:
+[DM-font](https://github.com/clovaai/dmfont) : Few-shot Compositional Font Generation with Dual Memory <br />
+-> [paper](https://arxiv.org/abs/2005.10510)
 
 
 [FontForge](https://fontforge.org/en-US/) : Fully formatted font editor that can support all plain font formats, To Convert SVG to TTF <br />
