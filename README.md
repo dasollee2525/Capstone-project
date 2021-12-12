@@ -1,5 +1,5 @@
 # 2021-2 Capstone project(SWE3028): TeamA - Jjangdol
-[SWE3028-41] Capstone Design
+[SWE3028-41] Capstone Design <br />
 Contact e-mail : 9603226407@hanmail.net
 
 ## Fontmaking Webservice using AI model : DM-font 
@@ -7,7 +7,7 @@ Contact e-mail : 9603226407@hanmail.net
 ### Brief Explanation
 
 
-We developed web-service(GANdan-fontmaker) based on Dual Memory-Augmented Font Generation Network([DM-font](https://github.com/clovaai/dmfont)). Our service provides two distinctive functions; combining people’s font style and re-correcting font style for satisfying user needs.
+We developed web-service(***GANdan-fontmaker***) based on Dual Memory-Augmented Font Generation Network([DM-font](https://github.com/clovaai/dmfont)). Our service provides two distinctive functions; combining people’s font style and re-correcting font style for satisfying user needs.
 
 ### Overall Architecture
 ![readmeImg/overall.png](readmeImg/overall.png)
