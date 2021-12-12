@@ -1,7 +1,7 @@
 # 2021-2 Capstone project(SWE3028): TeamA - Jjangdol
 [SWE3028-41] Capstone Design <br />
-Contact e-mail : 9603226407@hanmail.net
-
+Contact e-mail : 9603226407@hanmail.net <br />
+Document : [proposal](readmeImg/proposal.pdf), [final](readmeImg/final.pdf)<br />
 ## Fontmaking Webservice using AI model : DM-font 
 
 ### Brief Explanation
