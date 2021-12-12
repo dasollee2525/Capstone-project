@@ -18,7 +18,7 @@ conda install --name CONDA_ENV_NAME --file requirements.txt
 Note that using different version of required packages can effects the results, especially PyTorch. The implementations are tested on Python 3.7+
 
 
-#### Should pull out the dmfont, and ProgramFiles directories outside of Capstone-project directory
+#### Please pull out the dmfont, and ProgramFiles directories outside of Capstone-project directory
 ```
 .
 ├── dmfont                 # From Capstone-project directory
@@ -29,7 +29,20 @@ Note that using different version of required packages can effects the results, 
 └── ProgramFiles           # From Capstone-project directory
 
 ```
+#### Please check your local Path in FlaskProj directory
+```
+.
+├── dmfont                 
+├── Capstone-project      
+│   ├── FlaskProj          
+│   │   ├── HelloWorld.py  # modify the localPath                
+│   │   ├── Png2Svg.py     # modify the localPath     
+│   │   ├── Svg2Ttf.py     # modify the localPath
+│   │   ├── Template.py    # modify the localPath, webPublicPath, popplerPath  
+│   │   └── ...                
+└── ProgramFiles           
 
+```
 
 ## Installation
 
@@ -76,11 +89,19 @@ Data sources for Korean-handwriting datasets were built from [UhBee fonts](http:
 In terminal(1) Server using node.js will run. <br />
 In terminal(2) Frontend using React will run. <br />
 In terminal(3) Flask server will run.
-<br /><br />
+<br />
 #### terminal command:
 ```
 terminal(1)> node server
 terminal(2)> npm start
 terminal(3)> python HelloWorld.py
 ```
+You can test on localhost:3000/
+## How To Use & Demo
+
+You can get the project information and Demo [HERE](https://youtu.be/8tiPPnAHw38)
+
+![readmeImg/img1.png](readmeImg/img1.png)
+![readmeImg/img2.png](readmeImg/img2.png)
+![readmeImg/img3.png](readmeImg/img3.png)
 
